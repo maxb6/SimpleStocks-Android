@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="600dp">
+
+    <TextView
+        android:id="@+id/pbTitle"
+        android:layout_width="250dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="6dp"
+        android:text="Price to Book"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/pbText"
+        app:layout_constraintEnd_toStartOf="@+id/closeFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/pbText"
+        android:layout_width="313dp"
+        android:layout_height="505dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:scrollbars="vertical"
+        android:text="@string/pb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:foreground="?android:attr/selectableItemBackground"
+        android:id="@+id/closeFragment"
+        android:layout_width="44dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/pbText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.785"
+        app:srcCompat="@drawable/ic_baseline_close_24"
+        tools:ignore="VectorDrawableCompat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

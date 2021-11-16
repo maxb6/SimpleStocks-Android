@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">SimpleStocks</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name ="market_cap">
+        "       Market cap—or market capitalization—refers to the total value of all a companies shares of stock. It is calculated by multiplying the price of a stock by its total number of outstanding shares.
+
+
+        Market cap allows investors to understand the relative size of one company versus another and measures what a company is worth on the open market.
+
+
+        Large-cap companies are typically firms with a market value of $10 billion or more. They are typically the safest companies and have had years of growth.
+
+
+        Mid-cap companies are typically businesses with a market value between $2 billion and $10 billion. They are established companies in industries experiencing or expected to experience rapid growth.
+
+
+        Small-cap companies are typically those with a market value of $300 million to $2 billion. They are considered the most aggressive and risky of the 3 categories."
+
+    </string>
+
+    <string name ="pe">
+        "       The price-to-earnings ratio (P/E ratio) is the most popular valuation tool used to measure a companies stock price compared to its earnings.
+
+
+        It is calculated by diving the current stock price over current earnings per share (Stock price / Earnings per share).
+
+
+        This ratio essentially tells investors how much they must pay to own $1 of current earnings. For example with a P/E of 30, investors are willing to pay $30 for $1 of that companies earnings.
+
+
+        The higher a P/E ratio is, the more expensive or overvalued that company may be. However every industry has different median P/E ratios. For this reason it's best to not compare ratios across industries.
+
+
+        For example, a fast growing tech company will most likely have a higher P/E ratio then a large cap beverage company. When it comes to companies in emerging markets, P/E ratio is tricky to analyze.
+
+
+        Currently the median P/E for the S and P 500 is 14.85.
+
+        "
+    </string>
+
+    <string name ="pb">
+        "       The price-to-book ratio (P/B ratio) is popular way for value investors to find potential investments. Value investing focuses on picking stocks that appear to be trading for less then their intrinsic or book value.
+
+
+        Book value of a company represents the B in this ratio and it is calculated by: Total assets - Total liabilities.
+
+
+        Assets represent what a company owns that can provide future economic benefit. Liabilities represent what the company owes to other parties, including banks, governments, other companies, etc.
+
+
+        P/B ratio is calculated by diving the current stock price over current book value per share (Stock Price / Book value per share).
+
+
+        A P/B ratio below 1 typically means the company is undervalued as it indicates that the company has a lot of assets compared to it's liabilities.
+
+
+        For service and information technology companies that have small book values, it can be difficult to judge them based on P/B ratio. As mentioned, this ratio is best used for value investing.
+
+        "
+    </string>
+
+    <string name ="peg">
+        "       The price per earnings-to-growth ratio (PEG ratio) is similar to the P/E ratio but also takes into consideration a companies expected growth. Due to this aspect, this ratio is considered to be a great indicator of a stocks true value.
+
+
+        The PEG ratio is calculated by: price to earnings / earnings per share growth.
+
+
+        Growth rate is a desirable statistic as it is estimated by dozens of analysts who evaluate stocks for a living. It also reveals the value of companies that are in high growth emerging markets.
+
+
+        A PEG ratio that is lower then it's, P/E ratio may indicate that a stock is undervalued.
+
+
+        The growth rate that is used can vary depending on website. In this formula, it is the 5 year expected growth. Some other resources may use historical growth which can cause some inconsistencies.
+        "
+    </string>
+
+    <string name ="yield">
+        "       The dividend yield of a stock is very important for long term investors as it's essentially providing investors with free money simply for owning the stock.
+
+
+        Here the yield is expressed as a percentage and it can be calculated by: Yield = amount paid to shareholder / share price
+
+
+        Receiving a dividend can be a great benefit to owning a stock as regardless whether the stock goes up or down, shareholders will always receive their dividend for that year.
+
+
+        Typically companies that offer a dividend are established companies with strong balance sheets. Historically companies in the utility and consumer staple industries have higher yields.
+
+
+        It's important to note that higher dividend yield doesn't always mean a better investment opportunity. As the yield may be elevated because of a declining stock price.
+        "
+    </string>
+
+    <string name ="ocf">
+        "    Operating cash flow represents the cash a company generates from it's normal business operations. This statistic indicates whether a company can generate positive cash flow to maintain and grow its business.
+
+
+        It is calculated by: operating cash flow = operating income + depreciation + change in working capital - taxes
+
+
+       This statistic is crucial considering the main goal for a business is to make profit and be cash flow positive. Companies with strong operating cash flow numbers are in the best positions to enhance their products or services and acquire other businesses.
+
+
+        Ultimately, operating cash flow is a benchmark for a companies financial success. It provides a clear picture of the reality of the companies operations.
+        "
+    </string>
+
+
+</resources>
