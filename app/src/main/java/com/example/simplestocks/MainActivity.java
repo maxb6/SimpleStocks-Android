@@ -1,23 +1,33 @@
 package com.example.simplestocks;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.simplestocks.Database.DatabaseHelper;
 import com.example.simplestocks.Model.Stock;
 import com.example.simplestocks.Model.StockAdapter;
+import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.jetbrains.annotations.NotNull;
@@ -36,7 +46,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private EditText editTextStock;
     private Button selectStockButton;
@@ -58,6 +68,9 @@ public class MainActivity extends AppCompatActivity {
     private Context context;
 
     SwipeRefreshLayout refreshLayout;
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +79,24 @@ public class MainActivity extends AppCompatActivity {
 
         editTextStock = findViewById(R.id.editTextStock);
         selectStockButton = findViewById(R.id.selectStockButton);
-        refreshLayout = findViewById(R.id.refreshLayout);
+        //refreshLayout = findViewById(R.id.refreshLayout);
+
+        //drawer layout menu system
+        drawerLayout = findViewById(R.id.drawerLayout);
+        navigationView = findViewById(R.id.nav_view);
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
+        navigationView.bringToFront();
+
+        navigationView.setNavigationItemSelectedListener(this);
+
+
+        navigationView.setCheckedItem(R.id.nav_home);
 
         //shared preferences
         SharedPreferences pref = getSharedPreferences("StockPrefs", Context.MODE_PRIVATE);
@@ -79,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
                 stockTyped = editTextStock.getText().toString().trim();
                 //stockTyped will have its json file be parsed and then sent to sql db as a stock object
                 callStockClient(stockTyped);
+
             }
 
         });
@@ -86,15 +117,52 @@ public class MainActivity extends AppCompatActivity {
         context=this;
         loadStocks();
 
-        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+       /* refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
                 //refreshStocks();
                 refreshLayout.setRefreshing(false);
             }
+
         });
+
+        */
     }
 
+
+    // Functions for menu system
+    @Override
+    public void onBackPressed() {
+        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+            drawerLayout.closeDrawer(GravityCompat.START);
+        }
+        else{
+            super.onBackPressed();
+        }
+
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        switch(item.getItemId()){
+            case R.id.nav_home:
+                break ;
+            case R.id.nav_article:
+                goToArticleActivity();
+                break;
+            case R.id.nav_profile:
+                goToProfileActivity();
+                break;
+        }
+
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+
+
+    //Functions for stock api
 
     private void loadStocks() {
 
@@ -125,6 +193,7 @@ public class MainActivity extends AppCompatActivity {
             dbHelper.deleteStockByID(stockID);
             mAdapter.notifyItemRemoved(position);
             loadStocks();
+            Toast.makeText(getApplicationContext(),"Stock deleted successfully",Toast.LENGTH_SHORT).show();
         }
     };
 
@@ -191,6 +260,7 @@ public class MainActivity extends AppCompatActivity {
                              SharedPreferences.Editor edt = pref.edit();
                              edt.putString("stock_string7", myResponse);
                              edt.apply();
+                             Toast.makeText(getApplicationContext(),"Stock added successfully",Toast.LENGTH_SHORT).show();
 
                          }
                      });
@@ -427,6 +497,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void goToProfileActivity(){
+        Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+        startActivity(intent);
+    }
+
+    private void goToArticleActivity(){
+        Intent intent = new Intent(MainActivity.this, ArticleActivity.class);
+        startActivity(intent);
+    }
 
 
 }
