@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">SimpleStocks</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name ="market_cap">
+    <string name="market_cap">
         "       Market cap—or market capitalization—refers to the total value of all a companies shares of stock. It is calculated by multiplying the price of a stock by its total number of outstanding shares.
 
 
@@ -18,7 +18,7 @@
 
     </string>
 
-    <string name ="pe">
+    <string name="pe">
         "       The price-to-earnings ratio (P/E ratio) is the most popular valuation tool used to measure a companies stock price compared to its earnings.
 
 
@@ -39,7 +39,7 @@
         "
     </string>
 
-    <string name ="pb">
+    <string name="pb">
         "       The price-to-book ratio (P/B ratio) is popular way for value investors to find potential investments. Value investing focuses on picking stocks that appear to be trading for less then their intrinsic or book value.
 
 
@@ -60,7 +60,7 @@
         "
     </string>
 
-    <string name ="peg">
+    <string name="peg">
         "       The price per earnings-to-growth ratio (PEG ratio) is similar to the P/E ratio but also takes into consideration a companies expected growth. Due to this aspect, this ratio is considered to be a great indicator of a stocks true value.
 
 
@@ -77,7 +77,7 @@
         "
     </string>
 
-    <string name ="yield">
+    <string name="yield">
         "       The dividend yield of a stock is very important for long term investors as it's essentially providing investors with free money simply for owning the stock.
 
 
@@ -94,7 +94,7 @@
         "
     </string>
 
-    <string name ="ocf">
+    <string name="ocf">
         "    Operating cash flow represents the cash a company generates from it's normal business operations. This statistic indicates whether a company can generate positive cash flow to maintain and grow its business.
 
 
@@ -107,6 +107,9 @@
         Ultimately, operating cash flow is a benchmark for a companies financial success. It provides a clear picture of the reality of the companies operations.
         "
     </string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
 
 </resources>
