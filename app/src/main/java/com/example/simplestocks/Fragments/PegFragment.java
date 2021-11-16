@@ -47,7 +47,7 @@ public class PegFragment extends DialogFragment {
             double pegNum = Double.parseDouble(peg);
             //for low pe
             if(pegNum <= 1){
-                pegTv.append("\n\nWith a P/B ratio of "+peg+" , "+stock+" has a low PEG ratio and may be undervalued" );
+                pegTv.append("\n\nWith a PEG ratio of "+peg+" , "+stock+" has a low PEG ratio and may be undervalued" );
             }
 
             //for mid pe
@@ -57,7 +57,7 @@ public class PegFragment extends DialogFragment {
 
             //for high pe
             if(pegNum >1.25 ){
-                pegTv.append("\n\nWith a P/B ratio of "+peg+" , "+stock+" has a high PEG ratio and may be overvalued." );
+                pegTv.append("\n\nWith a PEG ratio of "+peg+" , "+stock+" has a high PEG ratio and may be overvalued." );
             }
         }
 
