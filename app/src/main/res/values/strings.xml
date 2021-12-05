@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">SimpleStocks</string>
     <!-- TODO: Remove or change this placeholder text -->
+
     <string name="market_cap">
         "       Market cap—or market capitalization—refers to the total value of all a companies shares of stock. It is calculated by multiplying the price of a stock by its total number of outstanding shares.
 
@@ -105,6 +106,166 @@
 
 
         Ultimately, operating cash flow is a benchmark for a companies financial success. It provides a clear picture of the reality of the companies operations.
+        "
+    </string>
+
+    <string name="article1">
+        " Market fluctuations make it difficult for most investors (and even some professional managers) to determine precisely when to capitalize on an investment.
+
+        However, there is a useful investment technique called dollar–cost averaging.
+
+        With dollar-cost averaging, you invest a fixed-dollar amount at regularly scheduled intervals, while also taking into account market fluctuations.
+
+        But what does this mean exactly?
+
+        Well, think of dollar-cost averaging as a ‘market volatility alarm clock’ for your investments.
+
+        When the unit price is high, your fixed investment will buy fewer mutual fund units. When the price drops, it will, in turn, buy more units. In doing so, your average unit cost will be lower and you will be eliminating the risk of investing in the market at the wrong time.
+
+        Plus, the longer you choose to take advantage of dollar-cost averaging (such as a period of 5 to 10 years), the more lucrative it will prove to be.
+
+        Can this investment strategy really lower your investment costs and reduce the impact of market volatility on your portfolio? The answer, in short, is yes.
+        However, to truly maximize its benefits, here are 7 ways to make the most of dollar-cost averaging:
+
+
+        1. Start using this strategy as early as possible.
+
+        Dollar-cost averaging instills the practice and discipline of investing regularly. The earlier you learn this particular lesson, the greater the potential for gain over the long term.
+        It’s also effective, even if you can only afford to invest smaller amounts—making dollar-cost averaging a very practical strategy at the start of your education career (when you’re typically lower on the pay grid).
+
+        2. Invest consistently.
+
+        Whether investing a set dollar amount or a percentage of your income, Educators Certified Financial Planner, Mike Cunningham, recommends doing it the same way every time.
+        “One of the things that makes dollar-cost averaging effective is the consistency”, says Mike. “So, pick how you want to invest, whether that be weekly, monthly, or quarterly—and stick with it. Otherwise, you’ll end up saving at different ratios, which will cause inconsistent returns over the long term.”
+
+
+        3. Remember to rebalance your portfolio.
+
+        Together with your financial specialist, you’ve worked hard to determine the right mix of investments in your portfolio (also known as its ‘asset allocation’).
+        Just keep in mind that different investments will grow or decline at different rates.
+        One year may be good for stocks and bad for bonds—the next year, vice versa. The different parts of your portfolio will also grow at different rates. To compensate for the natural ups and downs of the market (and keep your original asset allocation), your portfolio should be rebalanced to reflect its original target at least once a year.
+
+
+        4. Keep calm and carry on (with dollar-cost averaging).
+
+        It may be tempting to abandon this strategy when the market gets turbulent. But resist the urge to pull the plug. Doing so means inadvertently going back to trying to time the market—exactly what any financial advisor would advise against.
+
+
+        5. Remain engaged.
+
+        Just because you’re committed to a strategy doesn’t mean you stop being involved.
+        For example, some investors establish a ‘stop-loss order’ to sell an investment (an order that’s put in to automatically sell a stock when an investment drops by a predetermined amount). However, a stop-loss order is more appropriate if you are buying shares of a stock, rather than investing in a dividend-producing fund or exchange-traded fund.
+        Moral of the story: keep your eye on the ball when it comes to any investment strategy.
+        Don’t have time to be constantly checking in on your investments? Educators Monitored Portfolios are the solution.
+
+
+        6. Have a lump sum to invest? Treat it differently.
+
+        If you should find yourself coming into a large sum of money that you want to invest (I.e. through an inheritance), don’t take more than a year to invest it. Studies have shown that a lump sum invested all at once tends to produce higher returns (about two-thirds of the time) than money invested in 12 monthly installments.The takeaway?
+        Keeping cash on the sidelines for too long could mean missing out on potential gains from putting those dollars to work.
+
+
+        7. Be aware of costs.
+
+        Because dollar-cost averaging requires buying units regularly, trading and transaction fees can add up. You can find out more about the costs of investing in mutual funds in The Learning Centre. "
+    </string>
+
+    <string name="article2">
+       " How to Pick a Stock
+        Smart stock-pickers have three big things in common:
+
+
+        They have decided in advance what they want their portfolios to achieve, and they're determined to stick with it.
+        They stay aware of the daily news, trends, and events that drive the economy and every company in it.
+        They use those goals and knowledge to inform the decisions they make to buy or sell stocks.
+
+        Determine Your Goals
+        The first step to picking investments is determining the purpose of your portfolio. Everyone's purpose for investing is to make money, but investors may be focused on generating an income supplement during retirement, on preserving their wealth, or on capital appreciation.
+
+        Each of these goals requires a very different strategy.
+
+        Three Types of Investors
+        Income-oriented investors focus on buying (and holding) stocks in companies that pay good dividends regularly. These tend to be solid but low-growth companies in sectors such as utilities. Other options include highly-rated bonds, real estate investment trusts (REITs), and master limited partnerships.
+
+        Investors who aim at wealth preservation have a low tolerance for risk, by nature or because of their circumstances. They prefer to invest in stable blue-chip corporations. They might zero in on consumer staples, the companies that do well in good times and bad. They do not chase initial public offerings (IPOs).
+
+        Investors who are looking for capital appreciation are looking for the stocks of companies that are in their best early growth years. They are willing to take a higher degree of risk for the chance of big gains.
+
+        The Diversified Portfolio
+        Any of these investor types might use a combination of the above strategies. In fact, that's one of the prime motives of diversification. A conservative investor can devote a small portion of a portfolio to growth stocks. A more aggressive investor should earmark a percentage for solid blue-chip stocks to offset any losses.
+
+        Deciding which category you fall under is the easy part. Figuring out which stocks to pick gets complicated.
+
+        Keep Your Eyes Open
+        It's vital to keep up with market news and opinions. Reading the financial news and keeping up with industry blogs by writers whose views interest you is a form of passive research. A news article or blog post can form the foundation of an investment thesis.
+
+        The underlying argument can be a common-sense observation. For example, you might note that the emerging markets nations are producing new middle classes made up of people who demand a greater variety of consumer goods. As a result, there will be a surge in demand for certain products and commodities.
+
+        The "Story" Behind a Stock Pick
+        Taking the argument a step further, the investor can deduce that with an increase in the demand for a product, some producers of that product will prosper.
+
+        This type of basic analysis forms the "story" behind the investment, which justifies purchasing a stock.
+
+        At the same time, it's important to be critical of your own assumptions and theories. You may love doughnuts and fast cars, but that doesn't mean that the newly affluent of Southeast Asia are clamoring for them too.
+
+        Once you are comfortable and convinced of the general argument after performing this form of qualitative research, corporate press releases and investor presentation reports are a good place for continued analysis."
+    </string>
+
+    <string name="article3">
+        "What exactly is a stock chart, and how does it help you analyze stocks?
+        Simply put, a stock chart is a graph that shows you the price of a stock over a specific period of time – for example, five years. More advanced stock charts will show additional data, and by understanding the basics you can pull out a lot of information about a stock’s historic, current, and expected performance.
+
+        One of the best websites to look at basic stock information is Google Finance. Yahoo! Finance is a close second.
+
+        Now let’s take a look at a typical stock chart. Let’s use Apple for this article.
+
+        If you don’t already know, the series of letters after the name of the company is the ticker symbol. It identifies the company on the stock exchange.
+
+        In this case, I’ll search for AAPL, which is Apple’s ticker symbol. This is what we get:
+
+        how to read a stock chart
+
+        Next, click the button to expand the chart to full screen and it’ll look like this:
+
+        apple stock chart
+
+        I’ve also taken the liberty of filtering only to the last 10 years, which you can easily do by clicking the corresponding button (which I’ve highlighted for you).
+
+    So here we’re looking at the last 10 years of Apple’s stock. I bet you wish you would have gotten in in late 2008!
+
+    Now let’s dive into the different pieces and parts of the stock chart so you can begin to read one like a pro.
+
+        "
+    </string>
+
+    <string name="article4">
+        "Quick facts about index funds
+
+        They pool money from multiple investors to buy the individual stocks, bonds or securities that make up a particular market index
+
+        They are a good way to minimize risk because they track a market index, which generally rises in value over time
+
+        They're a passive investment with lower fees than mutual funds managed daily by professional brokers — and they often show better returns
+
+        Their potential gains and losses are less volatile than those of managed funds that try to beat the market
+
+        What is an index fund?
+        An index fund is a type of mutual fund whose holdings match or track a particular market index. It's hands-off, and you could build a diversified portfolio earning solid returns using mostly this type of investment.
+
+        That's because index funds don’t try to beat the market, or earn higher returns compared with market averages. Instead, these funds try to be the market — buying stocks of every firm listed on an index  to mirror the performance of the index as a whole.
+
+        Index funds can help balance the risk in an investor's portfolio, as market swings tend to be less volatile across an index compared with individual stocks.
+
+        » Ready to get started? Here's how to invest in index funds
+
+        Key things to know about index funds
+        They're an indirect way to buy the whole market. An index fund buys the securities that make up an entire index. For example, if the index tracks the Standard and Poor's 500 — an index of 500 of the largest companies in the United States — the fund buys shares from every company listed on the index (or a representative sample of stocks). An investor, in turn, buys shares from the fund, whose value will mirror the gains and losses of the index being tracked.
+
+        By accepting defeat, you actually win. Picking individual stocks, you're probably not going to outperform the market. Not even the pros do: Research shows that from 2001 to 2016, more than 90% of active fund managers underperformed their benchmark index. So, meeting market gains is a surer bet than beating the market, and that's just what index funds are designed to do.
+
+        Index funds are increasingly popular with investors. According to Morningstar, actively managed mutual funds and exchange-traded funds in the U.S. saw outflows of nearly $514 billion, while passively managed funds saw nearly $1.6 trillion in new money from April 2014 to April 2017. The rise of robo-advisors and passive investing in general have helped fuel interest. See a deeper comparison of index funds and mutual funds here.
+
+        Index funds are available across a variety of asset classes. Investors can buy funds that focus on companies with small, medium or large capital values, or focus on a sector like technology or energy. These indexes are perhaps less diversified than the broadest market index, but still more so than if you were to buy stock in a handful of companies within a sector.
         "
     </string>
 

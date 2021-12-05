@@ -55,7 +55,7 @@ public class StockAdapter extends RecyclerView.Adapter<StockAdapter.StockViewHol
 
             //textviews
             stockTickerTV = itemView.findViewById(R.id.stockTickerTV);
-            stockNameTV = itemView.findViewById(R.id.stockNameTV);
+            stockNameTV = itemView.findViewById(R.id.videoTitleTV);
             stockPriceTV = itemView.findViewById(R.id.stockPriceTV);
             marketCapTV = itemView.findViewById(R.id.marketCapTV);
             peTV = itemView.findViewById(R.id.peTV);
@@ -184,10 +184,10 @@ public class StockAdapter extends RecyclerView.Adapter<StockAdapter.StockViewHol
     }
 
 
-
     @Override
     public int getItemCount() {
         return stockList.size();
     }
+
 
 }

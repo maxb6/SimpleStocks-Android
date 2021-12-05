@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:background="@color/lightGrey"
+    app:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="393dp"
+        android:layout_height="120dp"
+        android:layout_margin="4dp"
+        android:background="@color/lightGrey">
+
+        <Button
+            android:id="@+id/articleButton"
+            android:layout_width="389dp"
+            android:layout_height="123dp"
+            android:background="?android:attr/selectableItemBackground"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="3dp" />
+
+        <TextView
+            android:id="@+id/videoTitleTV"
+            android:layout_width="221dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:text="Article Name"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/articleButton" />
+
+        <ImageView
+            android:id="@+id/articleImageView"
+            android:layout_width="100dp"
+            android:layout_height="106dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/youtube_logo"
+            android:elevation="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/articleSourceTV"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/articleSourceTV"
+            android:layout_width="223dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="32dp"
+            android:text="Article Source"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/articleButton" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="119dp"
+            android:layout_height="120dp"
+            android:background="@color/stock_green_true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

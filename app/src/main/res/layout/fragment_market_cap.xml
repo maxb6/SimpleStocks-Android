@@ -7,7 +7,7 @@
     android:layout_height="600dp">
 
     <TextView
-        android:id="@+id/mcTitle"
+        android:id="@+id/articleNameFragmentTV"
         android:layout_width="250dp"
         android:layout_height="37dp"
         android:layout_marginStart="21dp"
@@ -16,14 +16,14 @@
         android:layout_marginBottom="6dp"
         android:text="Market Capitalization"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/mcText"
+        app:layout_constraintBottom_toTopOf="@+id/articleTextFragmentTV"
         app:layout_constraintEnd_toStartOf="@+id/closeFragment"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/mcText"
+        android:id="@+id/articleTextFragmentTV"
         android:layout_width="313dp"
         android:layout_height="505dp"
         android:layout_marginStart="21dp"
@@ -44,7 +44,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/mcText"
+        app:layout_constraintBottom_toTopOf="@+id/articleTextFragmentTV"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.785"

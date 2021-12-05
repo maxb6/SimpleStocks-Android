@@ -13,6 +13,7 @@ import com.example.simplestocks.Model.Stock;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -124,7 +125,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         String ocf = cursor.getString(cursor.getColumnIndex(Config.COLUMN_STOCK_OCF));
 
                         //adding this stock to stockList
-                        stockList.add(new Stock(id, ticker, name, price, mc, pe, pb, peg, div, ocf));
+                        stockList.add(0,new Stock(id, ticker, name, price, mc, pe, pb, peg, div, ocf));
 
                     } while (cursor.moveToNext());
 
@@ -212,6 +213,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
 
     }
+
 }
 
 

@@ -3,11 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/drawable-v21/mybutton.xml" value="0.14351851851851852" />
+        <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/drawable-v21/round_button.xml" value="0.16111111111111112" />
+        <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.13859649122807016" />
+        <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/drawable/green_button.xml" value="0.22763157894736843" />
+        <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.21447368421052632" />
+        <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14351851851851852" />
+        <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/drawable/mybutton.xml" value="0.14351851851851852" />
+        <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/drawable/round_button.xml" value="0.16111111111111112" />
         <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/layout/activity_article.xml" value="0.264" />
-        <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/layout/activity_main.xml" value="0.21403508771929824" />
+        <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/layout/activity_profile.xml" value="0.21403508771929824" />
+        <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/layout/activity_video.xml" value="0.4" />
+        <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/layout/article_item.xml" value="0.20662768031189083" />
+        <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/layout/article_item1.xml" value="0.125" />
+        <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/layout/colors.xml" value="0.21403508771929824" />
+        <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/layout/fragment_article.xml" value="0.2" />
+        <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/layout/fragment_market_cap.xml" value="0.125" />
+        <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/layout/fragment_ocf.xml" value="0.125" />
+        <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/layout/fragment_peg.xml" value="0.20087719298245615" />
+        <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/layout/fragment_yield.xml" value="0.125" />
         <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/layout/header.xml" value="0.21403508771929824" />
+        <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/layout/stock_item.xml" value="0.3280141843971631" />
         <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/layout/toolbar.xml" value="0.10964912280701754" />
+        <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/layout/video_item.xml" value="0.536" />
         <entry key="..\:/Documents/AndroidStudioProjects/SimpleStocks/app/src/main/res/menu/main_menu.xml" value="0.21403508771929824" />
       </map>
     </option>

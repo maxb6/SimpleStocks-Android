@@ -11,15 +11,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -28,15 +28,11 @@ import com.example.simplestocks.Database.DatabaseHelper;
 import com.example.simplestocks.Model.Stock;
 import com.example.simplestocks.Model.StockAdapter;
 import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 
@@ -60,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected DatabaseHelper dbHelper;
 
     protected List<Stock> stockList;
+    protected List<Stock> reverseStockList;
 
     //recyclerview
     private RecyclerView mRecyclerView;
@@ -77,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         editTextStock = findViewById(R.id.editTextStock);
         selectStockButton = findViewById(R.id.selectStockButton);
         //refreshLayout = findViewById(R.id.refreshLayout);
@@ -85,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("Home");
         setSupportActionBar(toolbar);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
@@ -108,6 +107,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 //take stock typed as input
                 stockTyped = editTextStock.getText().toString().trim();
                 //stockTyped will have its json file be parsed and then sent to sql db as a stock object
+                hideKeyboard(MainActivity.this);
                 callStockClient(stockTyped);
 
             }
@@ -129,6 +129,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         */
     }
 
+    public static void hideKeyboard(Activity activity) {
+        InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        //Find the currently focused view, so we can grab the correct window token from it.
+        View view = activity.getCurrentFocus();
+        //If no view currently has focus, create a new one, just so we can grab a window token from it
+        if (view == null) {
+            view = new View(activity);
+        }
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+    }
 
     // Functions for menu system
     @Override
@@ -151,9 +161,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_article:
                 goToArticleActivity();
                 break;
-            case R.id.nav_profile:
-                goToProfileActivity();
+            case R.id.nav_video:
+                goToVideoActivity();
                 break;
+
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
@@ -166,10 +177,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void loadStocks() {
 
-        mRecyclerView = findViewById(R.id.recyclerView);
+        mRecyclerView = findViewById(R.id.stockRecyclerView);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
         stockList = dbHelper.getAllStocks();
+        /*
+        for(int i=stockList.size()-1;i>=0;i--){
+            reverseStockList.add(stockList.get(i));
+        }
+
+         */
+
         mAdapter = new StockAdapter(stockList);
         Log.i(TAG,"STOCK LIST: "+stockList.toString());
         mRecyclerView.setAdapter(mAdapter);
@@ -497,13 +515,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
-    private void goToProfileActivity(){
-        Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+    private void goToArticleActivity(){
+        Intent intent = new Intent(MainActivity.this, ArticleActivity.class);
         startActivity(intent);
     }
 
-    private void goToArticleActivity(){
-        Intent intent = new Intent(MainActivity.this, ArticleActivity.class);
+    private void goToVideoActivity(){
+        Intent intent = new Intent(MainActivity.this, VideoActivity.class);
         startActivity(intent);
     }
 

@@ -13,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import com.example.simplestocks.Model.Stock;
 import com.example.simplestocks.R;
 
 
@@ -34,7 +33,7 @@ public class MarketCapFragment extends DialogFragment {
         Bundle args = getArguments();
         String stock = args.getString("stock");
         String mc = args.getString("mc");
-        mcTv = view.findViewById(R.id.mcText);
+        mcTv = view.findViewById(R.id.articleTextFragmentTV);
         mcTv.setMovementMethod(new ScrollingMovementMethod());
 
         //analyze market cap amount

@@ -15,76 +15,118 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.simplestocks.Model.Article;
 import com.example.simplestocks.Model.ArticleAdapter;
+import com.example.simplestocks.Model.Video;
+import com.example.simplestocks.Model.VideoAdapter;
+import com.example.simplestocks.Model.YoutubeConfig;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.youtube.player.YouTubeBaseActivity;
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArticleActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class VideoActivity extends YouTubeBaseActivity implements NavigationView.OnNavigationItemSelectedListener{
 
-    private static final String TAG = "ArticleActivity";
+    private static final String TAG = "VideoActivity";
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     Toolbar toolbar;
+
+    YouTubePlayerView youTubePlayerView;
+    Button playButton;
+    YouTubePlayer.OnInitializedListener onInitializedListener;
 
     private RecyclerView mRecyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
     private RecyclerView.Adapter mAdapter;
     private Context context;
 
-    private List<Article> articleList = new ArrayList<>();
+    private List<Video> videoList = new ArrayList<>();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_article);
+        setContentView(R.layout.activity_video);
 
         //drawer layout menu system
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.nav_view);
         toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("Articles");
-        setSupportActionBar(toolbar);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener(this);
-        navigationView.setCheckedItem(R.id.nav_article);
+        navigationView.setCheckedItem(R.id.nav_video);
+
+
+        Log.d(TAG, "OnCreate: Starting.");
+
+        //intialize youtube components
+
+        youTubePlayerView = findViewById(R.id.youtubePlayerView);
+        playButton = findViewById(R.id.playButton);
+
+        onInitializedListener = new YouTubePlayer.OnInitializedListener() {
+            @Override
+            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
+
+                List<String> ytList = new ArrayList<>();
+
+                ytList.add("sCqox8Mfm58");
+                ytList.add("aVTffZmlKVY");
+                ytList.add("YANlHHaBp8k");
+                ytList.add("IGcq8FiIpOk");
+
+                youTubePlayer.loadVideos(ytList);
+
+            }
+
+            @Override
+            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
+
+            }
+        };
+
+        playButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                youTubePlayerView.initialize(YoutubeConfig.getApiKey(), onInitializedListener);
+            }
+        });
 
         //recycler view and article adapter
-        mRecyclerView = findViewById(R.id.articleRecyclerView);
+        mRecyclerView = findViewById(R.id.videoRecyclerView);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
 
-        Article article1 = new Article("7 steps to DCA"
-                , "Educators Financial Group",getString(R.string.article1), BitmapFactory.decodeResource(getResources(),R.drawable.dca));
-        articleList.add(article1);
+        Video video1 = new Video("What is Dollar Cost Averaging?");
+        videoList.add(video1);
 
-        Article article2 = new Article("How to pick a stock"
-                , "Investopedia",getString(R.string.article2), BitmapFactory.decodeResource(getResources(),R.drawable.stock_pick));
-        articleList.add(article2);
+        Video video2 = new Video("Stock Market for Beginners");
+        videoList.add(video2);
 
-        Article article3 = new Article("How to read a stock chart"
-                , "Money Under 30",getString(R.string.article3), BitmapFactory.decodeResource(getResources(),R.drawable.stock_chart));
-        articleList.add(article3);
+        Video video3 = new Video("Warren Buffett: Proper Stock Picking");
+        videoList.add(video3);
 
-        Article article4 = new Article("What is an index fund"
-                , "Nerd Wallet",getString(R.string.article4), BitmapFactory.decodeResource(getResources(),R.drawable.index_fund));
-        articleList.add(article4);
+        Video video4 = new Video("Reading a Candlestick Chart");
+        videoList.add(video4);
 
-        mAdapter = new ArticleAdapter(articleList);
-        Log.i(TAG,"Article LIST: "+articleList.toString());
+        mAdapter = new VideoAdapter(videoList);
+        Log.i(TAG,"Video LIST: "+videoList.toString());
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mAdapter.notifyDataSetChanged();
 
     }
-
 
     // Functions for menu system
     @Override
@@ -106,9 +148,7 @@ public class ArticleActivity extends AppCompatActivity implements NavigationView
                 goToMainActivity();
                 break ;
             case R.id.nav_article:
-                break;
-            case R.id.nav_video:
-                goToVideoActivity();
+                goToArticleActivity();
                 break;
 
         }
@@ -122,10 +162,9 @@ public class ArticleActivity extends AppCompatActivity implements NavigationView
         startActivity(intent);
     }
 
-    private void goToVideoActivity(){
-        Intent intent = new Intent(this, VideoActivity.class);
+    private void goToArticleActivity(){
+        Intent intent = new Intent(this, ArticleActivity.class);
         startActivity(intent);
     }
-
 
 }
