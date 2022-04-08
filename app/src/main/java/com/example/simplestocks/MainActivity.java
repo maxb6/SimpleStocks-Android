@@ -240,7 +240,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 //.url("https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-profile?symbol=tsla&region=US")
                 .url(url)
                 .get()
-                .addHeader("x-rapidapi-key", "cc7d5a3a94mshf02a8d7f7daf522p1286adjsnc17159b46ff3")
+                .addHeader("x-rapidapi-key", "****************************************")
                 .addHeader("x-rapidapi-host", "apidojo-yahoo-finance-v1.p.rapidapi.com")
                 .build();
 
