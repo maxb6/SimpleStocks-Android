@@ -4,4 +4,4 @@ SimpleStocks is an Android application which allows new investors to easily trac
 
 Click on each of the stock metrics for a detailed explanation.
 
-<img src="ss.png" width="128"/>
+<img src="ss.png" width="500"/>
